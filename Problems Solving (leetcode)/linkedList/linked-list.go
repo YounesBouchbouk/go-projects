@@ -71,3 +71,44 @@ func (l *List) PrintList() {
 	}
 	fmt.Println()
 }
+
+func MergeTwoLists(list1 *List, list2 *List) *List {
+	listresult := &List{}
+
+	if list1.head == nil && list2.head == nil {
+		return listresult
+	}
+
+	curr1 := list1.head
+	curr2 := list2.head
+
+	for curr1 != nil && curr2 != nil {
+
+		if curr1.data >= curr2.data {
+			listresult.Add(curr2.data)
+			listresult.Add(curr1.data)
+
+		} else if curr1.data < curr2.data {
+			listresult.Add(curr1.data)
+			listresult.Add(curr2.data)
+
+		}
+
+		curr1 = curr1.next
+		curr2 = curr2.next
+
+	}
+
+	for curr1 != nil {
+		listresult.Add(curr1.data)
+		curr1 = curr1.next
+	}
+
+	for curr2 != nil {
+		listresult.Add(curr2.data)
+		curr2 = curr2.next
+
+	}
+
+	return listresult
+}

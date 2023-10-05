@@ -28,15 +28,24 @@ import (
 
 func main() {
 	list := &linkedlist.List{}
+	list2 := &linkedlist.List{}
 	list.Add(1)
 	list.Add(2)
-	list.Add(3)
 	list.Add(4)
+
+	list2.Add(1)
+	list2.Add(3)
+	list2.Add(4)
+	list2.Add(6)
 
 	fmt.Println("Initial List: ")
 	list.PrintList()
 
-	list.Reverse()
-	fmt.Println("List reverse  ")
-	list.PrintList()
+	fmt.Println("seconde List  ")
+	list2.PrintList()
+
+	listMerged := linkedlist.MergeTwoLists(list, list2)
+
+	fmt.Println("Merged List  ")
+	listMerged.PrintList()
 }
