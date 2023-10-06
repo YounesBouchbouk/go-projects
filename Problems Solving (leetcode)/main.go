@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	// fmt.	Println("topKFrequent: ", topKFrequent([]int{2}, 1))
@@ -18,5 +20,6 @@ func main() {
 	// }, 3))
 	// fmt.Println("the min value : ", searchRotatedSorted([]int{1, 3}, 0))
 	// fmt.Println("max profit : ", maxProfit([]int{2, 7, 1, 11, 4}))
+	fmt.Println("MaxSlidingWindow : ", MaxSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
 
 }
