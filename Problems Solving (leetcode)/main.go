@@ -1,5 +1,11 @@
 package main
 
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 func main() {
 
 	// fmt.	Println("topKFrequent: ", topKFrequent([]int{2}, 1))
@@ -23,5 +29,14 @@ func main() {
 	// fmt.Println("climbStairs : ", ClimbStairs(5))
 	// fmt.Println("MaxSlidingWindow : ", minCostClimbingStairs([]int{1, 100, 1, 1, 1, 100, 1, 1, 100, 1}))
 	// fmt.Println("coinChange : ", coinChange([]int{186, 419, 83, 408}, 6249))
+
+	// // rootList := tree.New(4)
+	// var smallTe tree.Tree
+	// tree.Insert(&smallTe, 4)
+	// tree.Insert(&smallTe, 2)
+	// tree.Insert(&smallTe, 4)
+
+	// treeStr := smallTe.String()
+	// fmt.Println(treeStr)
 
 }
